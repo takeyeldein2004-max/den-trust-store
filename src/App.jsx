@@ -1,3 +1,6 @@
+import Cart from "./pages/Cart"
+import Offers from "./pages/Offers"
+import OfferDetail from "./pages/OfferDetail"
 import { useState, useEffect } from "react"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import Preloader from "./components/Preloader" // <-- NEW IMPORT
