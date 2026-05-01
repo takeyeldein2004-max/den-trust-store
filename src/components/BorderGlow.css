@@ -1,0 +1,42 @@
+.border-glow-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--border-radius);
+  padding: 1px;
+  background: var(--card-bg);
+}
+
+.border-glow-card > .edge-light {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+  opacity: var(--edge-proximity, 0);
+  background: conic-gradient(
+    from var(--cursor-angle) at 50% 50%,
+    transparent 0deg,
+    var(--glow-color-60) 10deg,
+    var(--glow-color-50) 25deg,
+    var(--glow-color-40) 40deg,
+    var(--glow-color-30) 60deg,
+    var(--glow-color-20) 80deg,
+    var(--glow-color-10) 110deg,
+    transparent 130deg
+  );
+  transition: opacity 0.3s ease-out;
+}
+
+.border-glow-card > .border-glow-inner {
+  position: relative;
+  z-index: 2;
+  background: var(--card-bg);
+  border-radius: calc(var(--border-radius) - 1px);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
